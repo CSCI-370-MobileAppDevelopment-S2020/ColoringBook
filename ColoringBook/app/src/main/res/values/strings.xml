@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Coloring Book</string>
+    <string name="sports">Sports</string>
+    <string name="plants">Plants</string>
+    <string name="animals">Animals</string>
+    <string name="landscape">Landscape</string>
+    <string name="food">Food</string>
+
+</resources>

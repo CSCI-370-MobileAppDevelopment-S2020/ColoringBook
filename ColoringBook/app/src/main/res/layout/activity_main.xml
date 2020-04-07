@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="181.25"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="181.25"
+        android:orientation="vertical"
+        tools:context=".MainActivity">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/app_name"
+            android:textSize="22pt"
+            android:textAllCaps="true"
+            android:textColor="@color/colorPrimary"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <GridLayout
+        android:id="@+id/grid"
+        android:layout_width="match_parent"
+        android:layout_height="543.75">
+
+        <Button
+            android:id="@+id/sportsButton"
+            android:layout_width="200dp"
+            android:layout_height="93dp"
+            android:text="@string/sports"
+            android:visibility="visible" />
+
+        <Button
+            android:id="@+id/plantsButton"
+            android:layout_width="200dp"
+            android:layout_height="93dp"
+            android:layout_row="0"
+            android:layout_column="1"
+            android:text="@string/plants" />
+
+        <Button
+            android:id="@+id/foodButton"
+            android:layout_width="200dp"
+            android:layout_height="93dp"
+            android:layout_row="1"
+            android:layout_column="0"
+            android:text="@string/food" />
+
+        <Button
+            android:id="@+id/landscapeButton"
+            android:layout_width="200dp"
+            android:layout_height="93dp"
+            android:layout_row="1"
+            android:layout_column="1"
+            android:text="@string/landscape" />
+
+        <Button
+            android:id="@+id/animalsButton"
+            android:layout_width="200dp"
+            android:layout_height="93dp"
+            android:layout_row="2"
+            android:layout_column="0"
+            android:text="@string/animals" />
+
+    </GridLayout>
+
+</LinearLayout>
+
