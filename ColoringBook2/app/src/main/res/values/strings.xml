@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Coloring Book</string>
+    <string name="sports">Sports</string>
+    <string name="nature">Nature</string>
+    <string name="animals">Animals</string>
+    <string name="landscape">Landscape</string>
+    <string name="food">Food</string>
+    <dimen name="small_brush">10dp</dimen>
+    <integer name="small_size">10</integer>
+    <dimen name="medium_brush">20dp</dimen>
+    <integer name="medium_size">20</integer>
+    <dimen name="large_brush">30dp</dimen>
+    <integer name="large_size">30</integer>
+    <string name="start_new">New</string>
+    <string name="brush">Brush</string>
+    <string name="erase">Erase</string>
+    <string name="save">Save</string>
+    <string name="paint">Paint</string>
+    <string name="architecture">Architecture</string>
+    <string name="back">BACK</string>
+
+</resources>

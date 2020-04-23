@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/headerText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/nature"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textColor="@color/sports"
+        android:textSize="22pt"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/flower"
+        android:layout_width="match_parent"
+        android:layout_height="275dp"
+        app:srcCompat="@drawable/flower" />
+
+    <ImageView
+        android:id="@+id/angelOakTree"
+        android:layout_width="match_parent"
+        android:layout_height="291dp"
+        app:srcCompat="@drawable/angeloaktree" />
+
+    <Button
+        android:id="@+id/backButton"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:text="@string/back"
+        android:textSize="18pt"/>
+
+</LinearLayout>
