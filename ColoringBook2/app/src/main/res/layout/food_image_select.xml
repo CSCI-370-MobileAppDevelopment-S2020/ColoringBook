@@ -19,21 +19,14 @@
     <ImageView
         android:id="@+id/pizza"
         android:layout_width="match_parent"
-        android:layout_height="318dp"
+        android:layout_height="265dp"
         app:srcCompat="@drawable/pizza" />
 
     <ImageView
         android:id="@+id/icecream"
         android:layout_width="match_parent"
-        android:layout_height="248dp"
+        android:layout_height="288dp"
         app:srcCompat="@drawable/icecream" />
-
-    <Button
-        android:id="@+id/backButton"
-        android:layout_width="425dp"
-        android:layout_height="100dp"
-        android:text="@string/back"
-        android:textSize="18pt" />
 
 
 </LinearLayout>

@@ -12,11 +12,11 @@ public class FoodImageSelect extends AppCompatActivity {
 
     ImageView pizza;
     ImageView iceCream;
-    Button backBTN;
 
     private int imgId;
 
     private int RESPONSE_CODE = 1;
+    private int REQUEST_CODE = 1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,30 +24,32 @@ public class FoodImageSelect extends AppCompatActivity {
         setContentView(R.layout.food_image_select);
 
         final Intent intent = new Intent();
+        final Intent i = new Intent(this, SecondActivityMain.class);
 
         pizza = findViewById(R.id.pizza);
         iceCream = findViewById(R.id.icecream);
-        backBTN = findViewById(R.id.backButton);
 
         pizza.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                imgId = R.drawable.cofclogo;
+                imgId = R.drawable.pizza;
 
                 intent.putExtra("imgId", imgId);
                 setResult(RESPONSE_CODE, intent);
                 finish();
+                startActivityForResult(i, REQUEST_CODE);
             }
         });
 
         iceCream.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                imgId = R.drawable.cofcmascot;
+                imgId = R.drawable.icecream;
 
                 intent.putExtra("imgId", imgId);
                 setResult(RESPONSE_CODE, intent);
                 finish();
+                startActivityForResult(i, REQUEST_CODE);
             }
         });
     }

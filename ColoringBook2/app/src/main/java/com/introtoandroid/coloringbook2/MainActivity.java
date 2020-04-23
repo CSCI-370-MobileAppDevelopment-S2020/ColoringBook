@@ -1,11 +1,17 @@
 package com.introtoandroid.coloringbook2;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.drawerlayout.widget.DrawerLayout;
 
 import android.content.Intent;
+import android.graphics.Canvas;
+import android.graphics.Paint;
+import android.graphics.Path;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -15,8 +21,14 @@ public class MainActivity extends AppCompatActivity {
     Button landBTN;
     Button animalBTN;
     Button plantsBTN;
+    ImageButton brownBTN, redBTN, orangeBTN, yellowBTN, greenBTN, lblueBTN;
+    ImageButton rblueBTN, purpleBTN, pinkBTN, whiteBTN, grayBTN, blackBTN;
+    ImageButton newBTN, drawBTN, saveBTN, eraseBTN;
+    DrawerLayout pad;
+    Canvas canvas;
+    Paint myPaint;
+    Path drawPath;
 
-    private int RESPONSE_CODE = 1;
     private int REQUEST_CODE = 1;
 
     @Override
@@ -30,6 +42,24 @@ public class MainActivity extends AppCompatActivity {
         animalBTN = findViewById(R.id.animalsButton);
         plantsBTN = findViewById(R.id.plantsButton);
         landBTN = findViewById(R.id.landscapeButton);
+        myPaint = new Paint(R.color.selectedColor);
+        drawPath = new Path();
+        brownBTN = findViewById(R.id.brownButton);
+        redBTN = findViewById(R.id.redButton);
+        orangeBTN = findViewById(R.id.orangeButton);
+        yellowBTN = findViewById(R.id.yellowButton);
+        greenBTN = findViewById(R.id.greenButton);
+        lblueBTN = findViewById(R.id.lightBlueButton);
+        rblueBTN = findViewById(R.id.royalBlueButton);
+        purpleBTN = findViewById(R.id.purpleButton);
+        pinkBTN = findViewById(R.id.pinkButton);
+        whiteBTN = findViewById(R.id.whiteButton);
+        grayBTN = findViewById(R.id.grayButton);
+        blackBTN = findViewById(R.id.blackButton);
+        newBTN = findViewById(R.id.new_btn);
+        drawBTN = findViewById(R.id.draw_btn);
+        saveBTN = findViewById(R.id.save_btn);
+        eraseBTN = findViewById(R.id.erase_btn);
 
         final Intent s = new Intent(this, SportsImageSelect.class);
         final Intent p = new Intent(this, NatureImageSelect.class);
@@ -38,6 +68,13 @@ public class MainActivity extends AppCompatActivity {
         final Intent a = new Intent(this, AnimalsImageSelect.class);
         final Intent ar = new Intent(this, ArchitectureImageSelect.class);
 
+        blackBTN.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                myPaint.setColor(Integer.parseInt("#FFFFFF"));
+                Toast.makeText(MainActivity.this, "Black", Toast.LENGTH_LONG).show();
+            }
+        });
 
         sportsBTN.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -80,14 +117,5 @@ public class MainActivity extends AppCompatActivity {
                 startActivityForResult(ar, REQUEST_CODE);
             }
         });
-    }
-
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data){
-        if (requestCode == REQUEST_CODE){
-            if (resultCode == RESPONSE_CODE){
-                int imgId = data.getExtras().getInt("imgId");
-            }
-        }
     }
 }

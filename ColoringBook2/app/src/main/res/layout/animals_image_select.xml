@@ -20,20 +20,13 @@
     <ImageView
         android:id="@+id/jelly"
         android:layout_width="match_parent"
-        android:layout_height="241dp"
+        android:layout_height="243dp"
         app:srcCompat="@drawable/jellyfish" />
 
     <ImageView
         android:id="@+id/giraffe"
         android:layout_width="match_parent"
-        android:layout_height="324dp"
+        android:layout_height="318dp"
         app:srcCompat="@drawable/giraffe" />
-
-    <Button
-        android:id="@+id/backButton"
-        android:layout_width="414dp"
-        android:layout_height="100dp"
-        android:text="@string/back"
-        android:textSize="18pt" />
 
 </LinearLayout>

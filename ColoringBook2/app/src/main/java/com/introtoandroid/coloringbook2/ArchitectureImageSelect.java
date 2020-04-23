@@ -12,42 +12,44 @@ public class ArchitectureImageSelect extends AppCompatActivity {
 
     ImageView ravenel;
     ImageView cistern;
-    Button backBTN;
 
     private int imgId;
 
     private int RESPONSE_CODE = 1;
+    private int REQUEST_CODE = 1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.food_image_select);
+        setContentView(R.layout.architecture_image_select);
 
         final Intent intent = new Intent();
+        final Intent i = new Intent(this, SecondActivityMain.class);
 
-        ravenel = findViewById(R.id.jelly);
-        cistern = findViewById(R.id.giraffe);
-        backBTN = findViewById(R.id.backButton);
+        ravenel = findViewById(R.id.ravenel);
+        cistern = findViewById(R.id.cistern);
 
         ravenel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                imgId = R.drawable.cofclogo;
+                imgId = R.drawable.ravenel;
 
                 intent.putExtra("imgId", imgId);
                 setResult(RESPONSE_CODE, intent);
                 finish();
+                startActivityForResult(i, REQUEST_CODE);
             }
         });
 
         cistern.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                imgId = R.drawable.cofcmascot;
+                imgId = R.drawable.cistern;
 
                 intent.putExtra("imgId", imgId);
                 setResult(RESPONSE_CODE, intent);
                 finish();
+                startActivityForResult(i, REQUEST_CODE);
             }
         });
     }

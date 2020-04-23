@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-    <LinearLayout tools:context=".MainActivity" android:orientation="vertical" android:background="#FFCCCCCC" android:layout_height="match_parent" android:layout_width="match_parent" xmlns:tools="http://schemas.android.com/tools" xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout
+        tools:context=".MainActivity"
+        android:orientation="vertical"
+        android:background="#FFCCCCCC"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:android="http://schemas.android.com/apk/res/android">
 
     <TextView
         android:id="@+id/headerText"
@@ -19,14 +26,14 @@
         android:id="@+id/grid">
 
     <Button
-        android:layout_height="93dp"
+        android:layout_height="50dp"
         android:layout_width="200dp"
         android:text="@string/sports"
         android:id="@+id/sportsButton"
         android:visibility="visible"/>
 
     <Button
-        android:layout_height="93dp"
+        android:layout_height="50dp"
         android:layout_width="200dp"
         android:text="@string/nature"
         android:id="@+id/plantsButton"
@@ -34,7 +41,7 @@
         android:layout_row="0"/>
 
     <Button
-        android:layout_height="93dp"
+        android:layout_height="50dp"
         android:layout_width="200dp"
         android:text="@string/food"
         android:id="@+id/foodButton"
@@ -42,7 +49,7 @@
         android:layout_row="1"/>
 
     <Button
-        android:layout_height="93dp"
+        android:layout_height="50dp"
         android:layout_width="200dp"
         android:text="@string/landscape"
         android:id="@+id/landscapeButton"
@@ -50,7 +57,7 @@
         android:layout_row="1"/>
 
     <Button
-        android:layout_height="93dp"
+        android:layout_height="50dp"
         android:layout_width="200dp"
         android:text="@string/animals"
         android:id="@+id/animalsButton"
@@ -60,7 +67,7 @@
         <Button
             android:id="@+id/architectureButton"
             android:layout_width="200dp"
-            android:layout_height="93dp"
+            android:layout_height="50dp"
             android:layout_row="2"
             android:layout_column="1"
             android:text="@string/architecture" />
@@ -68,56 +75,192 @@
     </GridLayout>
 
 
-    <LinearLayout android:orientation="horizontal" android:layout_height="50dp" android:layout_width="wrap_content" android:layout_gravity="center">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_height="50dp"
+        android:layout_width="wrap_content"
+        android:layout_gravity="center">
 
-    <ImageButton android:layout_height="fill_parent" android:layout_width="wrap_content" android:id="@+id/new_btn" android:src="@drawable/clearpage" android:contentDescription="@string/start_new"/>
+    <ImageButton
+        android:layout_height="fill_parent"
+        android:layout_width="wrap_content"
+        android:id="@+id/new_btn"
+        android:src="@drawable/clearpage"
+        android:contentDescription="@string/start_new"/>
 
-    <ImageButton android:layout_height="fill_parent" android:layout_width="wrap_content" android:id="@+id/draw_btn" android:src="@drawable/brush" android:contentDescription="@string/brush"/>
+    <ImageButton
+        android:layout_height="fill_parent"
+        android:layout_width="wrap_content"
+        android:id="@+id/draw_btn"
+        android:src="@drawable/brush"
+        android:contentDescription="@string/brush"/>
 
-    <ImageButton android:layout_height="fill_parent" android:layout_width="wrap_content" android:id="@+id/erase_btn" android:src="@drawable/eraser" android:contentDescription="@string/erase"/>
+    <ImageButton
+        android:layout_height="fill_parent"
+        android:layout_width="wrap_content"
+        android:id="@+id/erase_btn"
+        android:src="@drawable/eraser"
+        android:contentDescription="@string/erase"/>
 
-    <ImageButton android:layout_height="fill_parent" android:layout_width="wrap_content" android:id="@+id/save_btn" android:src="@drawable/save" android:contentDescription="@string/save"/>
+    <ImageButton
+        android:layout_height="fill_parent"
+        android:layout_width="wrap_content"
+        android:id="@+id/save_btn"
+        android:src="@drawable/save"
+        android:contentDescription="@string/save"/>
 
 </LinearLayout>
-    ##cant run because of this package being wrong. maybe one of you know.
-    <com.introtoandroid.coloringbook android:background="#FFFFFFFF" android:layout_height="0dp" android:layout_width="fill_parent" android:id="@+id/drawing" android:layout_weight="1" android:layout_marginTop="3dp" android:layout_marginRight="5dp" android:layout_marginLeft="5dp" android:layout_marginBottom="3dp"/>
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:background="#FFFFFFFF"
+        android:layout_height="0dp"
+        android:layout_width="fill_parent"
+        android:id="@+id/drawing"
+        android:layout_weight="1"
+        android:layout_marginTop="3dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginBottom="3dp"/>
 
-
-    <LinearLayout android:orientation="vertical" android:layout_height="wrap_content" android:layout_width="wrap_content" android:layout_gravity="center">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_gravity="center">
 
     <!-- Top Row -->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:id="@+id/paint_colors">
 
-    <LinearLayout android:orientation="horizontal" android:layout_height="wrap_content" android:layout_width="wrap_content" android:id="@+id/paint_colors">
+        <ImageButton
+            android:id="@+id/brownButton"
+            android:layout_width="@dimen/large_brush"
+            android:layout_height="@dimen/large_brush"
+            android:layout_margin="2dp"
+            android:background="#FF660000"
+            android:contentDescription="@string/paint"
+            android:src="@drawable/paint"
+            android:tag="#FF660000" />
 
-    <ImageButton android:background="#FF660000" android:layout_height="@dimen/large_brush" android:layout_width="@dimen/large_brush" android:src="@drawable/paint" android:contentDescription="@string/paint" android:tag="#FF660000" android:onClick="paintClicked" android:layout_margin="2dp"/>
+        <ImageButton
+            android:id="@+id/redButton"
+            android:layout_width="@dimen/large_brush"
+            android:layout_height="@dimen/large_brush"
+            android:layout_margin="2dp"
+            android:background="#FFFF0000"
+            android:contentDescription="@string/paint"
+            android:src="@drawable/paint"
+            android:tag="#FFFF0000" />
 
-    <ImageButton android:background="#FFFF0000" android:layout_height="@dimen/large_brush" android:layout_width="@dimen/large_brush" android:src="@drawable/paint" android:contentDescription="@string/paint" android:tag="#FFFF0000" android:onClick="paintClicked" android:layout_margin="2dp"/>
+        <ImageButton
+            android:id="@+id/orangeButton"
+            android:layout_width="@dimen/large_brush"
+            android:layout_height="@dimen/large_brush"
+            android:layout_margin="2dp"
+            android:background="#FFFF6600"
+            android:contentDescription="@string/paint"
+            android:src="@drawable/paint"
+            android:tag="#FFFF6600" />
 
-    <ImageButton android:background="#FFFF6600" android:layout_height="@dimen/large_brush" android:layout_width="@dimen/large_brush" android:src="@drawable/paint" android:contentDescription="@string/paint" android:tag="#FFFF6600" android:onClick="paintClicked" android:layout_margin="2dp"/>
+        <ImageButton
+            android:id="@+id/yellowButton"
+            android:layout_width="@dimen/large_brush"
+            android:layout_height="@dimen/large_brush"
+            android:layout_margin="2dp"
+            android:background="#FFFFCC00"
+            android:contentDescription="@string/paint"
+            android:src="@drawable/paint"
+            android:tag="#FFFFCC00" />
 
-    <ImageButton android:background="#FFFFCC00" android:layout_height="@dimen/large_brush" android:layout_width="@dimen/large_brush" android:src="@drawable/paint" android:contentDescription="@string/paint" android:tag="#FFFFCC00" android:onClick="paintClicked" android:layout_margin="2dp"/>
+        <ImageButton
+            android:id="@+id/greenButton"
+            android:layout_width="@dimen/large_brush"
+            android:layout_height="@dimen/large_brush"
+            android:layout_margin="2dp"
+            android:background="#FF009900"
+            android:contentDescription="@string/paint"
+            android:src="@drawable/paint"
+            android:tag="#FF009900" />
 
-    <ImageButton android:background="#FF009900" android:layout_height="@dimen/large_brush" android:layout_width="@dimen/large_brush" android:src="@drawable/paint" android:contentDescription="@string/paint" android:tag="#FF009900" android:onClick="paintClicked" android:layout_margin="2dp"/>
-
-    <ImageButton android:background="#FF009999" android:layout_height="@dimen/large_brush" android:layout_width="@dimen/large_brush" android:src="@drawable/paint" android:contentDescription="@string/paint" android:tag="#FF009999" android:onClick="paintClicked" android:layout_margin="2dp"/>
+        <ImageButton
+            android:id="@+id/lightBlueButton"
+            android:layout_width="@dimen/large_brush"
+            android:layout_height="@dimen/large_brush"
+            android:layout_margin="2dp"
+            android:background="#FF009999"
+            android:contentDescription="@string/paint"
+            android:src="@drawable/paint"
+            android:tag="#FF009999" />
 
 </LinearLayout>
 
     <!-- Bottom Row -->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content">
 
-    <LinearLayout android:orientation="horizontal" android:layout_height="wrap_content" android:layout_width="wrap_content">
+        <ImageButton
+            android:id="@+id/royalBlueButton"
+            android:layout_width="@dimen/large_brush"
+            android:layout_height="@dimen/large_brush"
+            android:layout_margin="2dp"
+            android:background="#FF0000FF"
+            android:contentDescription="@string/paint"
+            android:src="@drawable/paint"
+            android:tag="#FF0000FF" />
 
-    <ImageButton android:background="#FF0000FF" android:layout_height="@dimen/large_brush" android:layout_width="@dimen/large_brush" android:src="@drawable/paint" android:contentDescription="@string/paint" android:tag="#FF0000FF" android:onClick="paintClicked" android:layout_margin="2dp"/>
+        <ImageButton
+            android:id="@+id/purpleButton"
+            android:layout_width="@dimen/large_brush"
+            android:layout_height="@dimen/large_brush"
+            android:layout_margin="2dp"
+            android:background="#FF990099"
+            android:contentDescription="@string/paint"
+            android:src="@drawable/paint"
+            android:tag="#FF990099" />
 
-    <ImageButton android:background="#FF990099" android:layout_height="@dimen/large_brush" android:layout_width="@dimen/large_brush" android:src="@drawable/paint" android:contentDescription="@string/paint" android:tag="#FF990099" android:onClick="paintClicked" android:layout_margin="2dp"/>
+        <ImageButton
+            android:id="@+id/pinkButton"
+            android:layout_width="@dimen/large_brush"
+            android:layout_height="@dimen/large_brush"
+            android:layout_margin="2dp"
+            android:background="#FFFF6666"
+            android:contentDescription="@string/paint"
+            android:src="@drawable/paint"
+            android:tag="#FFFF6666" />
 
-    <ImageButton android:background="#FFFF6666" android:layout_height="@dimen/large_brush" android:layout_width="@dimen/large_brush" android:src="@drawable/paint" android:contentDescription="@string/paint" android:tag="#FFFF6666" android:onClick="paintClicked" android:layout_margin="2dp"/>
+        <ImageButton
+            android:id="@+id/whiteButton"
+            android:layout_width="@dimen/large_brush"
+            android:layout_height="@dimen/large_brush"
+            android:layout_margin="2dp"
+            android:background="#FFFFFFFF"
+            android:contentDescription="@string/paint"
+            android:src="@drawable/paint"
+            android:tag="#FFFFFFFF" />
 
-    <ImageButton android:background="#FFFFFFFF" android:layout_height="@dimen/large_brush" android:layout_width="@dimen/large_brush" android:src="@drawable/paint" android:contentDescription="@string/paint" android:tag="#FFFFFFFF" android:onClick="paintClicked" android:layout_margin="2dp"/>
+        <ImageButton
+            android:id="@+id/grayButton"
+            android:layout_width="@dimen/large_brush"
+            android:layout_height="@dimen/large_brush"
+            android:layout_margin="2dp"
+            android:background="#FF787878"
+            android:contentDescription="@string/paint"
+            android:src="@drawable/paint"
+            android:tag="#FF787878" />
 
-    <ImageButton android:background="#FF787878" android:layout_height="@dimen/large_brush" android:layout_width="@dimen/large_brush" android:src="@drawable/paint" android:contentDescription="@string/paint" android:tag="#FF787878" android:onClick="paintClicked" android:layout_margin="2dp"/>
-
-    <ImageButton android:background="#FF000000" android:layout_height="@dimen/large_brush" android:layout_width="@dimen/large_brush" android:src="@drawable/paint" android:contentDescription="@string/paint" android:tag="#FF000000" android:onClick="paintClicked" android:layout_margin="2dp"/>
+        <ImageButton
+            android:id="@+id/blackButton"
+            android:layout_width="@dimen/large_brush"
+            android:layout_height="@dimen/large_brush"
+            android:layout_margin="2dp"
+            android:background="#FF000000"
+            android:contentDescription="@string/paint"
+            android:src="@drawable/paint"
+            android:tag="#FF000000" />
 
 </LinearLayout>
 

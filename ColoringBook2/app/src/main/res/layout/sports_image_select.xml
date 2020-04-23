@@ -19,20 +19,13 @@
     <ImageView
         android:id="@+id/cofcLogo"
         android:layout_width="match_parent"
-        android:layout_height="390dp"
+        android:layout_height="246dp"
         app:srcCompat="@drawable/cofclogo" />
 
     <ImageView
         android:id="@+id/cofcMascot"
         android:layout_width="match_parent"
-        android:layout_height="482dp"
+        android:layout_height="332dp"
         app:srcCompat="@drawable/cofcmascot" />
-
-    <Button
-        android:id="@+id/backButton"
-        android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:text="@string/back"
-        android:textSize="18pt"/>
 
 </LinearLayout>

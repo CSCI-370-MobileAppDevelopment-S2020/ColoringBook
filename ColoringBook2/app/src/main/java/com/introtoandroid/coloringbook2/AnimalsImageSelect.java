@@ -12,42 +12,44 @@ public class AnimalsImageSelect extends AppCompatActivity {
 
     ImageView jFish;
     ImageView giraffe;
-    Button backBTN;
 
     private int imgId;
 
     private int RESPONSE_CODE = 1;
+    private int REQUEST_CODE = 1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.food_image_select);
+        setContentView(R.layout.animals_image_select);
 
         final Intent intent = new Intent();
+        final Intent i = new Intent(this, SecondActivityMain.class);
 
         jFish = findViewById(R.id.jelly);
         giraffe = findViewById(R.id.giraffe);
-        backBTN = findViewById(R.id.backButton);
 
         jFish.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                imgId = R.drawable.cofclogo;
+                imgId = R.drawable.jellyfish;
 
                 intent.putExtra("imgId", imgId);
                 setResult(RESPONSE_CODE, intent);
                 finish();
+                startActivityForResult(i, REQUEST_CODE);
             }
         });
 
         giraffe.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                imgId = R.drawable.cofcmascot;
+                imgId = R.drawable.giraffe;
 
                 intent.putExtra("imgId", imgId);
                 setResult(RESPONSE_CODE, intent);
                 finish();
+                startActivityForResult(i, REQUEST_CODE);
             }
         });
     }

@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity
+            android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -17,11 +18,13 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".SportsImageSelect"></activity>
-        <activity android:name=".NatureImageSelect"></activity>
-        <activity android:name=".FoodImageSelect"></activity>
-        <activity android:name=".LandscapeImageSelect"></activity>
-        <activity android:name=".AnimalsImageSelect"></activity>
+        <activity android:name=".SportsImageSelect" android:parentActivityName=".MainActivity"></activity>
+        <activity android:name=".NatureImageSelect" android:parentActivityName=".MainActivity"></activity>
+        <activity android:name=".FoodImageSelect" android:parentActivityName=".MainActivity"></activity>
+        <activity android:name=".LandscapeImageSelect" android:parentActivityName=".MainActivity"></activity>
+        <activity android:name=".AnimalsImageSelect" android:parentActivityName=".MainActivity"></activity>
+        <activity android:name=".ArchitectureImageSelect" android:parentActivityName=".MainActivity"></activity>
+        <activity android:name=".SecondActivityMain" android:parentActivityName=".MainActivity"></activity>
 
     </application>
 

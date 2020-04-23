@@ -19,20 +19,13 @@
     <ImageView
         android:id="@+id/ravenel"
         android:layout_width="match_parent"
-        android:layout_height="241dp"
+        android:layout_height="252dp"
         app:srcCompat="@drawable/ravenel" />
 
     <ImageView
         android:id="@+id/cistern"
         android:layout_width="match_parent"
-        android:layout_height="324dp"
+        android:layout_height="337dp"
         app:srcCompat="@drawable/cistern" />
-
-    <Button
-        android:id="@+id/backButton"
-        android:layout_width="414dp"
-        android:layout_height="100dp"
-        android:text="@string/back"
-        android:textSize="18pt" />
 
 </LinearLayout>

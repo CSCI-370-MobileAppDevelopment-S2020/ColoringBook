@@ -12,11 +12,11 @@ public class NatureImageSelect extends AppCompatActivity {
 
     ImageView flower;
     ImageView tree;
-    Button backBTN;
 
     private int imgId;
 
     private int RESPONSE_CODE = 1;
+    private int REQUEST_CODE = 1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,30 +24,32 @@ public class NatureImageSelect extends AppCompatActivity {
         setContentView(R.layout.nature_image_select);
 
         final Intent intent = new Intent();
+        final Intent i = new Intent(this, SecondActivityMain.class);
 
         flower = findViewById(R.id.flower);
         tree = findViewById(R.id.angelOakTree);
-        backBTN = findViewById(R.id.backButton);
 
         flower.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                imgId = R.drawable.cofclogo;
+                imgId = R.drawable.flower;
 
                 intent.putExtra("imgId", imgId);
                 setResult(RESPONSE_CODE, intent);
                 finish();
+                startActivityForResult(i, REQUEST_CODE);
             }
         });
 
         tree.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                imgId = R.drawable.cofcmascot;
+                imgId = R.drawable.angeloaktree;
 
                 intent.putExtra("imgId", imgId);
                 setResult(RESPONSE_CODE, intent);
                 finish();
+                startActivityForResult(i, REQUEST_CODE);
             }
         });
     }

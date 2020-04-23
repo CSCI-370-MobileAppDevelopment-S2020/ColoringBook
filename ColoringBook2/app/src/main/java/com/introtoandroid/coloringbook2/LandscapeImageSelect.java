@@ -12,42 +12,44 @@ public class LandscapeImageSelect extends AppCompatActivity {
 
     ImageView volcano;
     ImageView beach;
-    Button backBTN;
 
     private int imgId;
 
     private int RESPONSE_CODE = 1;
+    private int REQUEST_CODE = 1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.food_image_select);
+        setContentView(R.layout.landscape_image_select);
 
         final Intent intent = new Intent();
+        final Intent i = new Intent(this, SecondActivityMain.class);
 
         volcano = findViewById(R.id.volcano);
         beach = findViewById(R.id.beach);
-        backBTN = findViewById(R.id.backButton);
 
         volcano.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                imgId = R.drawable.cofclogo;
+                imgId = R.drawable.volcano;
 
                 intent.putExtra("imgId", imgId);
                 setResult(RESPONSE_CODE, intent);
                 finish();
+                startActivityForResult(i, REQUEST_CODE);
             }
         });
 
         beach.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                imgId = R.drawable.cofcmascot;
+                imgId = R.drawable.beach;
 
                 intent.putExtra("imgId", imgId);
                 setResult(RESPONSE_CODE, intent);
                 finish();
+                startActivityForResult(i, REQUEST_CODE);
             }
         });
     }

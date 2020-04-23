@@ -20,20 +20,13 @@
     <ImageView
         android:id="@+id/volcano"
         android:layout_width="match_parent"
-        android:layout_height="307dp"
+        android:layout_height="288dp"
         app:srcCompat="@drawable/volcano" />
 
     <ImageView
         android:id="@+id/beach"
         android:layout_width="match_parent"
-        android:layout_height="253dp"
+        android:layout_height="270dp"
         app:srcCompat="@drawable/beach" />
-
-        <Button
-            android:id="@+id/backButton"
-            android:layout_width="414dp"
-            android:layout_height="100dp"
-            android:text="@string/back"
-            android:textSize="18pt" />
 
 </LinearLayout>

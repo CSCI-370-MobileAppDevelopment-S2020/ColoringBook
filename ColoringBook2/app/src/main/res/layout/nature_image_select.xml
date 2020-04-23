@@ -19,20 +19,13 @@
     <ImageView
         android:id="@+id/flower"
         android:layout_width="match_parent"
-        android:layout_height="275dp"
+        android:layout_height="246dp"
         app:srcCompat="@drawable/flower" />
 
     <ImageView
         android:id="@+id/angelOakTree"
         android:layout_width="match_parent"
-        android:layout_height="291dp"
+        android:layout_height="328dp"
         app:srcCompat="@drawable/angeloaktree" />
-
-    <Button
-        android:id="@+id/backButton"
-        android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:text="@string/back"
-        android:textSize="18pt"/>
 
 </LinearLayout>
