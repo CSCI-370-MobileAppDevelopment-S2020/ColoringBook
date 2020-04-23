@@ -18,5 +18,6 @@
     <string name="paint">Paint</string>
     <string name="architecture">Architecture</string>
     <string name="back">BACK</string>
+    <string name="clickedPickName"></string>
 
 </resources>
