@@ -66,6 +66,14 @@ public class SecondActivityMain extends AppCompatActivity {
                 paintCanvas.setBrush(size);
             }
         });
+
+        eraseBTN.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                paintCanvas.setColor(Color.WHITE);
+            }
+        });
+
         blackBTN.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

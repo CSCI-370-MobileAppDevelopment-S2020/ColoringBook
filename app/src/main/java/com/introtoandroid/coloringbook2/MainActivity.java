@@ -42,7 +42,6 @@ public class MainActivity extends AppCompatActivity {
         getWindowManager().getDefaultDisplay().getMetrics(metrics);
         paintCanvas.init(metrics);
 
-
         brushSize = findViewById(R.id.brushSize);
         brushBTN = findViewById(R.id.setBrushBtn);
         sportsBTN = findViewById(R.id.sportsButton);
@@ -127,6 +126,14 @@ public class MainActivity extends AppCompatActivity {
                 paintCanvas.setBrush(size);
             }
         });
+
+        eraseBTN.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                paintCanvas.setColor(Color.WHITE);
+            }
+        });
+
         blackBTN.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -164,11 +171,7 @@ public class MainActivity extends AppCompatActivity {
 
         rblueBTN.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-
-                paintCanvas.setColor(0xFF0000FF);
-            }
-        });
+            public void onClick(View v) { paintCanvas.setColor(0xFF0000FF); }});
 
         lblueBTN.setOnClickListener(new View.OnClickListener() {
             @Override
