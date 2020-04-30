@@ -34,9 +34,9 @@ public class SportsImageSelect extends AppCompatActivity {
             public void onClick(View v) {
                 imgId = R.drawable.cofclogo;
 
-                intent.putExtra("imgId", imgId);
-                setResult(RESPONSE_CODE, intent);
-                finish();
+                i.putExtra("imgId", imgId);
+                setResult(RESPONSE_CODE, i);
+                //finish();
                 startActivityForResult(i, REQUEST_CODE);
             }
         });
